@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Rental</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Main -->
+    <div class="container">
+        <div class="filter_search_dv">
+            <label for="search">Search Home:</label>
+            <div>
+                <input type="text" id="search" placeholder="Enter Home Name">
+                <button onclick="filterHomes()">Search</button>
+            </div>
+        </div>
+        <!-- Filtered Results Container -->
+        <div class="filtered-results" id="filteredHomeContainer"></div>
+        <h1>Home Rental!</h1>
+        <p>Rent a Home and explore the city.</p>
+
+        <!-- Rental Form -->
+        <form id="rental-form">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="name@example.com" required>
+            </div>
+            <div>
+                <label for="destination">Destination</label>
+                <select id="destination" required>
+                    <option selected disabled>Select your destination</option>
+                    <option value="1">City Tour</option>
+                    <option value="2">Mountain Trail</option>
+                    <option value="3">Beach Ride</option>
+                </select>
+            </div>
+            <div>
+                <label for="home">Home Type</label>
+                <select id="home" required>
+                    <option selected disabled>Select a Home</option>
+                    <option value="1">Mountain Home</option>
+                    <option value="2">Road Home</option>
+                    <option value="3">City Home</option>
+                </select>
+            </div>
+            <div>
+                <label for="price">Price Range</label>
+                <select id="price" required>
+                    <option selected disabled>Select a price range</option>
+                    <option value="1">$10 - $20</option>
+                    <option value="2">$20 - $30</option>
+                    <option value="3">$30 - $40</option>
+                </select>
+            </div>
+            <button type="submit"><i class="fa fa-bullhorn" aria-hidden="true"></i>Rent Now</button>
+        </form>
+
+        <!-- Submission Result -->
+        <div class="submission-result">
+            <h3>Congratulations!</h3>
+            <p>Thank you for your rental submission. Please wait for our team to contact you shortly.</p>
+        </div>
+
+        <!-- Bicycle Photos -->
+        <div class="Home_wrapper">
+            <div class="Homeinner_content">
+                <div class="rental-card">
+                    <div class="img_box">
+                        <img src="images/home7.png" class="img-fluid" alt="Mountain home">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mountain Home</h5>
+                        <p class="card-text">Perfect for adventurous trails.</p>
+                        <a href="#" class="btn btn-primary home-details-toggle" data-home="mountain-home"><i
+                                class="fas fa-info-circle me-2"></i>Details</a>
+                        <div class="home-details" id="mountain-home-details">
+                            <p>Trek trail homes are your do-more ride. They're versatile, light, and exceedingly
+                                capable, climbing as well as they descend, conquering trails from the Dolomites to
+                                Durango. They're the right home for anything from a quick stint on the trails to a
+                                brutal day of racing. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Homeinner_content">
+                <div class="rental-card">
+                    <div class="img_box">
+                        <img src="images/home2.png" class="img-fluid" alt="Road home">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Road Home</h5>
+                        <p class="card-text">Ideal for long distance rides.</p>
+                        <a href="#" class="btn btn-primary home-details-toggle" data-home="road-home"><i
+                                class="fas fa-info-circle me-2"></i>Details</a>
+                        <div class="home-details" id="road-home-details">
+                            <p>Conquer serious rides with performance road homes that combine innovative materials and
+                                construction with top-line spec for unparalleled performance on road, gravel, and
+                                everything in between. Light and aero, stable and capable, Trek’s performance road line
+                                offers refined machines that ride to win.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Homeinner_content">
+                <div class="rental-card">
+                    <div class="img_box">
+                        <img src="images/home3.png" class="img-fluid" alt="City home">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">City Home</h5>
+                        <p class="card-text">Great for exploring the city streets.</p>
+                        <a href="#" class="btn btn-primary home-details-toggle" data-home="city-home"><i
+                                class="fas fa-info-circle me-2"></i>Details</a>
+                        <div class="home-details" id="city-home-details">
+                            <p>Commuter homes are sought after for their versatility as well as their ability to get you
+                                and your cargo where you need to go. Whether you are riding to work, running errands, or
+                                pedaling to the local watering hole, we love commuter homes for discovering those simple
+                                pleasures buried in your daily grind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
